@@ -29,26 +29,26 @@
         }
         private function validateUsername($un) {
             if(strlen($un) > 25 ||  strlen($un) < 5){
-                array_push($this->errorArray, "Your username must be between 5 and 25 characters");
+                array_push($this->errorArray,  Constants::$usernameCharacters);
                 return;
             }
             // TODO: check if the username already exists
         }
         private function validateFirstName($fn) {
             if(strlen($fn) > 25 ||  strlen($fn) < 2){
-                array_push($this->errorArray, Constants::$usernameCharacters);
+                array_push($this->errorArray, Constants::$firstNameCharacters);
                 return;
             }
         }
         private function validateLastName($ln) {
             if(strlen($ln) > 25 ||  strlen($ln) < 2){
-                array_push($this->errorArray, Constants::$firstNameCharacters);
+                array_push($this->errorArray, Constants::$lasttNameCharacters);
                 return;
             }
         }
         private function validateEmails($em, $em2) {
             if($em != $em2){
-                array_push($this->errorArray, Constants::$lastNameCharacters);
+                array_push($this->errorArray, Constants::$emailDoNotMatch);
                 return;
             }
             if(!filter_var($em, FILTER_VALIDATE_EMAIL)){
@@ -60,7 +60,7 @@
 
         private function validatePasswords($pw, $pw2) {
             if($pw != $pw2){
-                 array_push($this->errorArray, Constants::$passwordDoNotMatch);
+                 array_push($this->errorArray, Constants::$passwordsDoNotMatch);
                 return;
             }
             if(preg_match('/[^A-Za-z0-9]/', $pw)){

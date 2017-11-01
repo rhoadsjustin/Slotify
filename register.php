@@ -36,7 +36,7 @@
             <p>
             <?php echo $account->getError(Constants::$usernameCharacters); ?>
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="e.g. bartSimpson" required>
+            <input type="text" id="username" name="username" placeholder="e.g. bartSimpson" value="<?php echo $_POST['username']; ?>"required>
             </p>
              <p>
              <?php echo $account->getError(Constants::$firstNameCharacters); ?>
