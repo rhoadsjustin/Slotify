@@ -1,6 +1,16 @@
+<?php
+include('config.php');
+
+if(isset($_SESSION['userLoggedIn'])) {
+    $userLoggedIn = $_SESSION['userLoggedIn'];
+} else {
+    header("Location: register.php");
+}
+
+?>
+
 <html>
-<title>
-Welcome to Slotify</title>
+<title>Welcome to Slotify</title>
 <body>
     <h1>YO YO YO</h1>
 </body>
