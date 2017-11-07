@@ -21,8 +21,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome to Slotify!</title>
     <link rel="stylesheet" href="./assets/css/register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/register.js"></script>
 </head>
 <body>
+
+    <?php
+        if(isset($_POST['registerButton'])) {
+           echo '<script>
+                    $(document).ready(function(){
+                
+                        $("#registerForm").show();
+                        $("#loginForm").hide();
+
+                    });
+                </script>';
+        } else {
+            echo ' <script>
+                    $(document).ready(function(){
+                
+                        $("#registerForm").hide();
+                        $("#loginForm").show();
+
+                    });
+                </script>';
+        }
+    ?>
+
+    
     <div id="background">
         <div id="loginContainer">
             <div id="inputContainer">
@@ -40,7 +66,11 @@
                     <input type="password" id="loginPassword" name="loginPassword"  placeholder="your password" required>
 
                     </p>
-                    <button type="submit" name="loginButton">Log In</button>
+                    <button type="submit" name="loginButton">LOG IN</button>
+
+                    <div class="hasAccountText">
+                        <span id="hideLogin">Don't have an Account Yet? Sign up Here</span>
+                    </div>
                 </form>
                 <form action="register.php" id="registerForm" method="POST">
                     <h2>Create your free account</h2>
@@ -86,7 +116,11 @@
                     <input type="password" id="password2" name="password2" placeholder="your password" required>
 
                     </p>
-                    <button type="submit" name="registerButton">Sign Up</button>
+                    <button type="submit" name="registerButton">SIGN UP</button>
+
+                    <div class="hasAccountText">
+                        <span id="hideRegister">Already have an Account? Login Here</span>
+                    </div>
                 </form>
             </div>
         </div>
