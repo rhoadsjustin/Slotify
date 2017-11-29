@@ -27,6 +27,20 @@ if(isset($_SESSION['userLoggedIn'])) {
 
     <div id="nowPlayingBar">
         <div id="nowPlayingLeft">
+
+            <div class="content">
+                <span class="albumLink">
+                    <img src="https://i.ytimg.com/vi/rb8Y38eilRM/maxresdefault.jpg" alt="" class="albumArtwork">
+                </span>
+                <div class="trackInfo">
+                    <span class="trackName">
+                        <span>Black Hole Sun</span>
+                    </span>
+                    <span class="artistName">
+                        <span>Soundgarden</span>
+                    </span>
+                </div>
+            </div>
         </div>
         <div id="nowPlayingCenter">
 
@@ -52,6 +66,18 @@ if(isset($_SESSION['userLoggedIn'])) {
                     <button class="controlButton repeat" title="Repeat Button">
                         <img src="assets/images/icons/repeat.png" alt="Repeat">
                     </button>
+                </div>
+
+                <div class="playbackBar">
+
+                    <span class="progressTime current">0.00</span>
+                    <div class="progressBar">
+                        <div class="progressBarBG">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <span class="progressTime remaining">0.00</span>
+
                 </div>
 
             </div>
