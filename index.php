@@ -1,46 +1,15 @@
-<?php
-include('config.php');
+<?php include('includes/header.php'); ?>
+<!-- main Container Content here -->
+<h2 class="pageHeadingBig">You Might Also Like</h2>
 
-//session_destroy();
+<div class="gridViewContainer">
 
-if(isset($_SESSION['userLoggedIn'])) {
-    $userLoggedIn = $_SESSION['userLoggedIn'];
-} else {
-    header("Location: register.php");
-}
+    <?php
+        $albumQuery = mysqli_query($con, "SELECT * FROM albums");
 
-?>
-
-<html>
-<head>
-<link rel="stylesheet" href="./assets/css/style.css">
-
-<title>Welcome to Slotify</title>
-
-
-</head>
-<body>
-
-<div id="mainContainer">
-
-    <div id="topContainer">
-
-         <?php include('./includes/navBarContainer.php'); ?>
-        <div id="mainViewContainer">
-
-            <div id="mainContent">
-            
-            </div>
-        </div> 
-    </div>
-
-        <?php include('./includes/nowPlayingBarContainer.php'); ?>
-
-
-
-
-
+        while($row = mysqli_fetch_array($albumQuery)) {
+            echo $row['title'] . '<br>';
+        }
+    ?>
 </div>
-
-</body>
-</html>
+<?php include('includes/footer.php'); ?>
