@@ -7,7 +7,7 @@ body {
     background-color: #181818;
     font-size: 14px;
     min-width: 720px;
-    color: 'white';
+    color: white;
 }
 * {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -188,8 +188,6 @@ body {
     right: 0px;
     top: 6px;
     width: 25px;
-
-
 }
 
 #mainViewContainer {
@@ -199,4 +197,33 @@ body {
 }
 #mainContent {
     padding: 0 20px;
+}
+.pageHeadingBig {
+    text-align: center;
+    padding: 20px;
+}
+.gridViewItem {
+    display: inline-block;
+    width: 29%;
+    margin-right: 20px;
+    max-width: 200px;
+    min-width: 150px;
+    margin-bottom: 20px;
+}
+.gridViewItem img {
+    width: 100%;
+}
+
+.gridViewInfo {
+    font-weight: 300px;
+    text-align: center;
+    padding: 5px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.gridViewItem a {
+    text-decoration: none;
+    color: #a0a0a0;
 }
