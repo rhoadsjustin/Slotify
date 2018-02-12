@@ -1,5 +1,8 @@
 <?php
 include('config.php');
+include('classes/Artist.php');
+include('classes/Album.php');
+
 
 //session_destroy();
 
